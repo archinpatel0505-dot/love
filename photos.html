@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Our Photos 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      margin:0;
+      min-height:100vh;
+      background:linear-gradient(135deg,#a1c4fd,#c2e9fb);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      font-family:Arial;
+      color:white;
+      text-align:center;
+    }
+    h2{margin-top:20px;}
+    .gallery{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      margin-top:20px;
+      gap:15px;
+    }
+    .gallery img{
+      width:120px;
+      height:120px;
+      border-radius:15px;
+      object-fit:cover;
+      border:2px solid white;
+    }
+    button{
+      margin-top:25px;
+      padding:12px 25px;
+      border:none;
+      border-radius:25px;
+      background:white;
+      color:#ff4d6d;
+      font-size:16px;
+      font-weight:bold;
+    }
+  </style>
+</head>
+<body>
+
+<h2>📸 Our Memories</h2>
+<div class="gallery">
+  <img src="https://via.placeholder.com/120?text=Photo1" alt="Photo1">
+  <img src="https://via.placeholder.com/120?text=Photo2" alt="Photo2">
+  <img src="https://via.placeholder.com/120?text=Photo3" alt="Photo3">
+</div>
+
+<button onclick="next()">Next ➜</button>
+
+<script>
+function next(){
+  window.location.href = "playlist.html";
+}
+</script>
+
+</body>
+</html>
