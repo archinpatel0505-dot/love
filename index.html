@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Unlock Love 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      margin:0;
+      height:100vh;
+      background:linear-gradient(135deg,#ff758c,#ff7eb3);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-family:Arial;
+      color:white;
+      text-align:center;
+    }
+    .box{
+      background:rgba(0,0,0,0.4);
+      padding:30px;
+      border-radius:15px;
+      width:85%;
+      max-width:300px;
+    }
+    input{
+      width:90%;
+      padding:10px;
+      border:none;
+      border-radius:8px;
+      margin-top:10px;
+      font-size:16px;
+    }
+    button{
+      margin-top:15px;
+      padding:10px 20px;
+      border:none;
+      border-radius:20px;
+      background:#ff4d6d;
+      color:white;
+      font-size:16px;
+    }
+    #msg{margin-top:15px;}
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>🔐 Unlock Love</h2>
+  <p>Enter BF Name 💕</p>
+  <input id="name" placeholder="Enter name">
+  <br>
+  <button onclick="check()">Unlock</button>
+  <div id="msg"></div>
+</div>
+
+<script>
+function check(){
+  let n = document.getElementById("name").value.toLowerCase();
+  if(n === "rahul"){   // ← CHANGE NAME HERE
+    document.getElementById("msg").innerHTML = "💖 Love Unlocked 💖";
+  }else{
+    document.getElementById("msg").innerHTML = "❌ Wrong name";
+  }
+}
+</script>
+
+</body>
+</html>
