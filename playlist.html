@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Our Playlist 🎶</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      margin:0;
+      min-height:100vh;
+      background: linear-gradient(135deg, #f6d365, #fda085);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      font-family: Arial;
+      color:white;
+      text-align:center;
+    }
+    h2{margin-top:20px;}
+    .playlist{
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+      margin-top:20px;
+    }
+    .song{
+      background: rgba(255,255,255,0.2);
+      padding:12px 20px;
+      border-radius:15px;
+      font-size:16px;
+    }
+    button{
+      margin-top:25px;
+      padding:12px 25px;
+      border:none;
+      border-radius:25px;
+      background:white;
+      color:#ff4d6d;
+      font-size:16px;
+      font-weight:bold;
+    }
+  </style>
+</head>
+<body>
+
+<h2>🎵 Our Favorite Songs</h2>
+
+<div class="playlist">
+  <div class="song">Song 1</div>
+  <div class="song">Song 2</div>
+  <div class="song">Song 3</div>
+  <div class="song">Song 4</div>
+</div>
+
+<button onclick="next()">Next ➜</button>
+
+<script>
+function next(){
+  window.location.href = "reasons.html"; // This can go to any next page
+}
+</script>
+
+</body>
+</html>
