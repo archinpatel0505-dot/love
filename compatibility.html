@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Love Compatibility 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      margin:0;
+      min-height:100vh;
+      background:linear-gradient(135deg,#ffb199,#ff7eb3);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-family:Arial;
+      color:white;
+      text-align:center;
+    }
+    .box{
+      background:rgba(0,0,0,0.35);
+      padding:25px;
+      border-radius:18px;
+      width:90%;
+      max-width:320px;
+    }
+    button{
+      margin-top:20px;
+      padding:12px 25px;
+      border:none;
+      border-radius:25px;
+      background:white;
+      color:#ff4d6d;
+      font-size:16px;
+      font-weight:bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>💞 Love Compatibility</h2>
+  <p>
+    Your love compatibility is:<br>
+    <span id="percent">0%</span>
+  </p>
+
+  <button onclick="next()">Next ➜</button>
+</div>
+
+<script>
+let shown=false;
+let i=0; // just to simulate first load
+setInterval(()=>{
+  if(!shown){
+    shown=true;
+    let p=document.getElementById("percent");
+    let n=0;
+    let inter=setInterval(()=>{
+      n++;
+      p.innerText=n+"%";
+      if(n===100) clearInterval(inter);
+    },20);
+  }
+},500);
+
+function next(){
+  window.location.href = "reasons.html";
+}
+</script>
+
+</body>
+</html>
