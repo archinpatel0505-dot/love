@@ -83,7 +83,11 @@ function nextQuestion(){
   if(index < quiz.length){
     showQuestion();
   } else {
-    document.body.innerHTML = "<h2>💖 Thank you for answering!</h2>";
+    // Final message after quiz
+    document.body.innerHTML = `
+      <h2>🎉 Happy Anniversary 💖</h2>
+      <h2>❤️ Happy Valentine’s Day ❤️</h2>
+    `;
   }
 }
 
