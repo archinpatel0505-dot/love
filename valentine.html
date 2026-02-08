@@ -1,63 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>💖 Will you be my Valentine?</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body{
-      margin:0;
-      min-height:100vh;
-      background: linear-gradient(135deg,#ff758c,#ff7eb3);
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      font-family: Arial;
-      color:white;
-      text-align:center;
-      padding:20px;
-    }
-    h2{
-      margin-bottom:20px;
-    }
-    .options{
-      display:flex;
-      flex-direction:column;
-      gap:15px;
-      width:100%;
-      max-width:300px;
-    }
-    button{
-      padding:12px;
-      border:none;
-      border-radius:20px;
-      background:white;
-      color:#ff4d6d;
-      font-size:16px;
-      font-weight:bold;
-      cursor:pointer;
-    }
-    button:hover{background:#ffe0e6;}
-  </style>
+<meta charset="UTF-8">
+<title>Valentine 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background:linear-gradient(135deg,#ff758c,#ff7eb3);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:Arial;
+  color:white;
+  text-align:center;
+}
+.box{
+  background:rgba(0,0,0,0.4);
+  padding:30px;
+  border-radius:20px;
+  width:85%;
+  max-width:320px;
+}
+button{
+  margin:10px;
+  padding:12px 25px;
+  border:none;
+  border-radius:25px;
+  background:white;
+  color:#ff4d6d;
+  font-size:16px;
+  font-weight:bold;
+}
+#result{
+  margin-top:20px;
+  font-size:22px;
+}
+</style>
 </head>
+
 <body>
 
-<h2>💌 Will you be my Valentine?</h2>
+<div class="box">
+  <h2>💌 Will you be my Valentine?</h2>
 
-<div class="options">
-  <button onclick="showMessage()">Yes</button>
-  <button onclick="showMessage()">No</button>
+  <button onclick="yes()">Yes 💖</button>
+  <button onclick="no()">No 😜</button>
+
+  <div id="result"></div>
 </div>
 
 <script>
-const urlParams = new URLSearchParams(window.location.search);
-const userName = urlParams.get("name") || "Love";
+function yes(){
+  document.getElementById("result").innerHTML =
+  "❤️ Happy Valentine’s Day ❤️<br>Happy Anniversary 💕";
+}
 
-function showMessage(){
-  document.body.innerHTML = `
-    <h2>❤️ Happy Valentine’s Day ${userName} ❤️</h2>
-  `;
+function no(){
+  document.getElementById("result").innerHTML =
+  "😏 Oops… Only YES is allowed!";
 }
 </script>
 
